@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f8f8f3" />
+    <meta name="description" content="Browse 45 foodstuff listings—including rice, sugar, cooking oil, salt, flour, semovita, noodles, pasta, tomato paste, and seasonings—at ZOA Market in Alagbado, Lagos." />
+    <title>Shop Products — ZOA Ventures</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="main.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="announcement"><span>🌾</span> Rice, sugar, cooking oil, salt, flour, semovita, noodles, pasta & seasonings <span class="announcement-divider">·</span> Alagbado, Lagos</div>
+
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="ZOA Market home">
+        <span class="brand-mark">ZOA</span>
+        <span class="brand-name">ZOA Ventures<span>Zinab Oluwadamilola Akinrinade</span></span>
+      </a>
+      <form class="search" id="search-form" role="search">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 4.2 4.2"></path></svg>
+        <input id="search-input" type="search" placeholder="Search the product catalog..." aria-label="Search products" role="combobox" aria-autocomplete="list" aria-controls="search-suggestions" aria-expanded="false" />
+        <kbd>Ctrl K</kbd>
+        <div class="search-suggestions" id="search-suggestions" role="listbox" aria-label="Matching products" hidden></div>
+      </form>
+      <div class="header-actions">
+        <button class="icon-button cart-button" id="cart-toggle" type="button" aria-label="Shopping cart, 0 items"><span class="cart-icon-wrap"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h8.7a2 2 0 0 0 1.9-1.5L22 8H6"></path><circle cx="10" cy="20" r="1"></circle><circle cx="18" cy="20" r="1"></circle></svg><span id="cart-count" class="cart-count">0</span></span><span class="action-label">Your cart</span></button>
+      </div>
+    </header>
+
+    <nav class="main-nav" aria-label="Main navigation">
+      <div class="nav-inner">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link active" id="shop-all-link" href="product.html" aria-current="page">Shop products</a>
+        <a class="nav-link" href="about.html">About ZOA</a>
+      </div>
+    </nav>
+
+    <main>
+      <section class="catalog-hero">
+        <div>
+          <span class="section-kicker">THE ZOA Ventures CATALOG</span>
+          <h1>Food cupboard<br /><em>favourites.</em></h1>
+          <p>Browse 45 listings for rice, sugar, cooking oil, salt, flour, semovita, noodles, pasta, tomato paste, and seasonings. Looking for something specific? Get in touch and we’ll be happy to help.</p>
+          <a class="primary-button" href="about.html#contact">Ask us about a product <span>→</span></a>
+        </div>
+        <div class="catalog-hero-art" role="img" aria-label="Staple food products at ZOA Market"><span>GOOD<br />FOOD,<br /><em>GOOD<br />DAYS.</em></span></div>
+      </section>
+
+      <section class="category-section catalog-categories" aria-label="Browse by category">
+        <div class="section-heading">
+          <div><span class="section-kicker">FIND WHAT YOU NEED</span><h2>Browse by category</h2></div>
+          <a href="about.html" class="text-link">Get to know ZOA <span>→</span></a>
+        </div>
+        <div class="category-grid" id="category-grid">
+          <button class="category-card selected" data-category="All" type="button"><span class="category-emoji all-emoji">✳</span><span>Everything</span></button>
+          <button class="category-card" data-category="Rice" type="button"><span class="category-emoji">🌾</span><span>Rice</span></button>
+          <button class="category-card" data-category="Sugar" type="button"><span class="category-emoji">🧂</span><span>Sugar</span></button>
+          <button class="category-card" data-category="Salt" type="button"><span class="category-emoji">🧂</span><span>Salt</span></button>
+          <button class="category-card" data-category="Cooking oil" type="button"><span class="category-emoji">🫒</span><span>Cooking oil</span></button>
+          <button class="category-card" data-category="Flour & semovita" type="button"><span class="category-emoji">🌾</span><span>Flour & semovita</span></button>
+          <button class="category-card" data-category="Noodles" type="button"><span class="category-emoji">🍜</span><span>Noodles</span></button>
+          <button class="category-card" data-category="Pasta" type="button"><span class="category-emoji">🍝</span><span>Pasta</span></button>
+          <button class="category-card" data-category="Seasonings" type="button"><span class="category-emoji">🧂</span><span>Seasonings</span></button>
+          <button class="category-card" data-category="Tomato paste" type="button"><span class="category-emoji">🍅</span><span>Tomato paste</span></button>
+        </div>
+      </section>
+
+      <section class="products-section catalog-products" id="shop">
+        <div class="section-heading product-heading">
+          <div><span class="section-kicker">BROWSE OUR SELECTION</span><h2>Products at ZOA Ventures</h2></div>
+          <div class="product-controls">
+            <span id="product-result-count" class="result-count"></span>
+            <label class="sort-label" for="sort-select">Sort by</label>
+            <select id="sort-select" aria-label="Sort products"><option value="featured">Featured</option><option value="price-low">Price: low to high</option><option value="price-high">Price: high to low</option></select>
+          </div>
+        </div>
+        <p class="catalog-notice"><strong>Prices and availability can change.</strong> Send your basket to ZOA Ventures to confirm current stock, prices, delivery options, and any delivery fee before you commit to an order.</p>
+        <div id="product-grid" class="product-grid" aria-live="polite"></div>
+        <div id="empty-state" class="empty-state" hidden>
+          <strong>No matching products found.</strong>
+          <p>Try a shorter name, a different spelling, or clear your search to browse everything.</p>
+          <button class="outline-button" id="clear-search" type="button">Clear search</button>
+        </div>
+        <div class="catalog-contact-callout"><span><strong>Can’t find what you need?</strong><small>Contact ZOA Market to ask about product availability.</small></span><a class="outline-button" href="about.html#contact">Contact us <span>→</span></a></div>
+      </section>
+    </main>
+
+    <footer class="site-footer"><a class="brand footer-brand" href="index.html"><span class="brand-mark">ZOA</span><span class="brand-name">ZOA Ventures<span>Zinab Oluwadamilola Akinrinade</span></span></a><p>Foodstuffs for everyday cooking, with friendly service in Alagbado, Lagos.</p><span>© 2026 ZOA Market</span></footer>
+
+    <div class="cart-backdrop" id="cart-backdrop"></div>
+    <aside class="cart-drawer" id="cart-drawer" aria-label="Your shopping cart" aria-hidden="true">
+      <div class="drawer-header"><div><span class="section-kicker">YOUR SELECTED ITEMS</span><h2>Your cart <span id="drawer-count">(0)</span></h2></div><button id="close-cart" class="close-button" type="button" aria-label="Close cart">×</button></div>
+      <div id="cart-items" class="cart-items"></div>
+      <div id="cart-empty" class="cart-empty"><span>🧺</span><strong>Your basket is empty.</strong><p>Browse our catalog to add a product.</p><button id="start-shopping" class="primary-button" type="button">Browse products <span>→</span></button></div>
+      <form id="order-form" class="cart-summary" hidden>
+        <div class="order-estimate"><span>Estimated items subtotal</span><strong id="cart-subtotal">₦0</strong></div>
+        <p class="order-price-note">Listed prices are estimates only. Delivery fees, availability, and final prices are confirmed by ZOA Market on WhatsApp.</p>
+        <label class="order-field" for="customer-name">Your name</label>
+        <input id="customer-name" name="customerName" type="text" autocomplete="name" placeholder="Name for this order" required />
+        <label class="order-field" for="customer-phone">Your phone number</label>
+        <input id="customer-phone" name="customerPhone" type="tel" autocomplete="tel" placeholder="e.g. 080 1234 5678" required />
+        <fieldset class="fulfilment-options">
+          <legend>How would you like to receive your order?</legend>
+          <label><input type="radio" name="fulfilment" value="Delivery" checked /> Delivery</label>
+          <label><input type="radio" name="fulfilment" value="Pickup" /> Pick up at 1 Tokura Street, Alagbado</label>
+        </fieldset>
+        <div id="delivery-address-field" class="order-address-field">
+          <label class="order-field" for="delivery-address">Delivery address</label>
+          <textarea id="delivery-address" name="deliveryAddress" rows="2" autocomplete="street-address" placeholder="Street, area, and any helpful directions" required></textarea>
+        </div>
+        <label class="order-field" for="order-note">Order note <span>(optional)</span></label>
+        <textarea id="order-note" name="orderNote" rows="2" placeholder="Anything else we should know?"></textarea>
+        <button id="checkout-button" class="primary-button checkout-button" type="submit">Continue to WhatsApp <span>↗</span></button>
+        <p class="order-handoff-note">This sends an order request to the ZOA Market team. Your order is not confirmed until they reply.</p>
+      </form>
+    </aside>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+    <section class="chat-panel" id="chat-panel" aria-label="ZOA product guide" aria-hidden="true">
+      <div class="chat-header"><span class="chat-avatar">Z</span><span class="chat-title"><strong>ZOA Product Guide</strong><small>Product guide · Here to help</small></span><button class="chat-close" id="chat-close" type="button" aria-label="Close chat">×</button></div>
+      <div class="chat-disclaimer">Ask about products, listed prices, orders, and delivery. Live stock is not connected; the team can check it for you.</div>
+      <div class="chat-messages" id="chat-messages" role="log" aria-live="polite" aria-relevant="additions"></div>
+      <form class="chat-form" id="chat-form"><label class="visually-hidden" for="chat-input">Ask ZOA a product question</label><input id="chat-input" name="message" type="text" placeholder="Ask about a product..." autocomplete="off" required /><button type="submit" aria-label="Send message"><span aria-hidden="true">↑</span></button></form>
+      <p class="chat-note">For live stock and price confirmation, contact the market.</p>
+    </section>
+    <button class="chat-launcher" id="chat-launcher" type="button" aria-expanded="false" aria-controls="chat-panel"><span class="chat-launcher-icon" aria-hidden="true">✳</span><span>Ask ZOA</span></button>
+  </body>
+</html>
