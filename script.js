@@ -386,7 +386,7 @@ function findProductsInQuestion(query) {
 }
 
 function whatsappAction(label, message) {
-  return { label, url: `https://wa.me/2349035915493?text=${encodeURIComponent(message)}` };
+  return { label, url: `https://wa.me/2349039624817?text=${encodeURIComponent(message)}` };
 }
 
 function answerProductQuestion(question) {
@@ -472,7 +472,7 @@ function answerProductQuestion(question) {
 
   if (/\b(contact|address|phone|email|whatsapp)\b/.test(query)) {
     return {
-      text: "You can reach ZOA Market at +234 903 591 5493 or akinrinadedare80@gmail.com. Visit 53 Mayeguns House, Ota Road, Alagbado, Lagos State, Nigeria. Opening hours: Monday–Saturday, 9:00 am–6:00 pm.",
+      text: "You can reach ZOA Market at +234 903 962 4817 or akinrinadedare80@gmail.com. Visit 53 Mayeguns House, Ota Road, Alagbado, Lagos State, Nigeria. Opening hours: Monday–Saturday, 9:00 am–6:00 pm.",
       actions: [
         whatsappAction("Message ZOA Market", "Hello ZOA Market, I have a question."),
         { label: "Get directions", url: "https://www.google.com/maps/search/?api=1&query=53%20Mayeguns%20House%2C%20Ota%20Road%2C%20Alagbado%2C%20Lagos%20State%2C%20Nigeria" }
@@ -847,7 +847,7 @@ document.querySelector("#order-form").addEventListener("submit", (event) => {
     "",
     "Please confirm availability, final total, and next steps."
   ].join("\n");
-  window.location.assign(`https://wa.me/2349035915493?text=${encodeURIComponent(orderDetails)}`);
+  window.location.assign(`https://wa.me/2349039624817?text=${encodeURIComponent(orderDetails)}`);
 });
 
 document.querySelector("#cart-toggle").addEventListener("click", () => setCartOpen(true));
