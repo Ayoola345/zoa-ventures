@@ -445,7 +445,7 @@ function answerProductQuestion(question) {
       text: "ZOA Market’s listed opening hours are Monday–Saturday, 9:00 am–6:00 pm. For a public holiday or today’s hours, please confirm with the team.",
       actions: [
         whatsappAction("Ask about today’s hours", "Hello ZOA Market, are you open today and what time do you close?"),
-        { label: "Get directions", url: "https://www.google.com/maps/search/?api=1&query=1%20Tokura%20Street%20off%20Omorege%20AIT%20Road%20Alagbado%20Lagos%20State" }
+        { label: "Get directions", url: "https://www.google.com/maps/search/?api=1&query=53%20Mayeguns%20House%2C%20Ota%20Road%2C%20Alagbado%2C%20Lagos%20State%2C%20Nigeria" }
       ]
     };
   }
@@ -472,10 +472,10 @@ function answerProductQuestion(question) {
 
   if (/\b(contact|address|phone|email|whatsapp)\b/.test(query)) {
     return {
-      text: "You can reach ZOA Market at +234 903 591 5493 or akinrinadedare80@gmail.com. Visit 1 Tokura Street, off Omorege, AIT Road, Alagbado, Lagos State. Opening hours: Monday–Saturday, 9:00 am–6:00 pm.",
+      text: "You can reach ZOA Market at +234 903 591 5493 or akinrinadedare80@gmail.com. Visit 53 Mayeguns House, Ota Road, Alagbado, Lagos State, Nigeria. Opening hours: Monday–Saturday, 9:00 am–6:00 pm.",
       actions: [
         whatsappAction("Message ZOA Market", "Hello ZOA Market, I have a question."),
-        { label: "Get directions", url: "https://www.google.com/maps/search/?api=1&query=1%20Tokura%20Street%20off%20Omorege%20AIT%20Road%20Alagbado%20Lagos%20State" }
+        { label: "Get directions", url: "https://www.google.com/maps/search/?api=1&query=53%20Mayeguns%20House%2C%20Ota%20Road%2C%20Alagbado%2C%20Lagos%20State%2C%20Nigeria" }
       ]
     };
   }
@@ -842,7 +842,7 @@ document.querySelector("#order-form").addEventListener("submit", (event) => {
     `Name: ${customerName}`,
     `Phone: ${customerPhone}`,
     `Fulfilment: ${fulfilment}`,
-    ...(fulfilment === "Delivery" ? [`Delivery address: ${deliveryAddress}`, "Please confirm the delivery fee and estimated delivery time."] : ["I will pick up from 1 Tokura Street, off Omorege, AIT Road, Alagbado."]),
+    ...(fulfilment === "Delivery" ? [`Delivery address: ${deliveryAddress}`, "Please confirm the delivery fee and estimated delivery time."] : ["I will pick up from 53 Mayeguns House, Ota Road, Alagbado, Lagos State, Nigeria."]),
     ...(orderNote ? [`Order note: ${orderNote}`] : []),
     "",
     "Please confirm availability, final total, and next steps."
